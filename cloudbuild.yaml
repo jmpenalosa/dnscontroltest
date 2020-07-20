@@ -1,5 +1,3 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
-images:
-- 'gcr.io/$PROJECT_ID/quickstart-image'
+- name: "gcr.io/mi9-learning-280020/dnscontrol@sha256:98d0c54a97899a855db13392b47c50b2fde6e003293a12b0f08c385e01cf9335"
+  args: [ "dnscontrol", "preview" ]
