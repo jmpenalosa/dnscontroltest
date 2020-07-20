@@ -1,3 +1,3 @@
 steps:
 - name: 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile'
-  args: ['build', '-t', 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile', '.']
+  args: ['build', '-t', 'stackexchange', '.']
