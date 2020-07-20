@@ -1,5 +1,3 @@
 steps:
-- name: 'https://github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/dnscontrol', '.']
-images:
-- 'gcr.io/$PROJECT_ID/dnsctonrol'
+- name: 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile'
+  args: ['build', '-t', 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile', '.']
