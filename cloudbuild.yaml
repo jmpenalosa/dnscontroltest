@@ -2,4 +2,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile', '.']
 images:
-- 'gcr.io/$PROJECT_ID/dnscontrol-demo
+- 'gcr.io/$PROJECT_ID/dnscontrol-demo'
