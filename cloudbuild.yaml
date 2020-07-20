@@ -1,3 +1,5 @@
 steps:
-- name: 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile'
-  args: ['build', '-t', 'stackexchange', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'github.com/jmpenalosa/dnscontroltest/blob/master/Dockerfile', '.']
+images:
+- 'gcr.io/$PROJECT_ID/dnscontrol-demo
