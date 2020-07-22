@@ -2,6 +2,14 @@ steps:
 steps:
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
+  args: [ '-c', "gcloud auth login" ]
+
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
+  args: [ '-c', "gcloud auth application-default login" ]
+
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
   args: [ '-c', "gcloud secrets versions access latest --secret=creds-json --format='get(payload.data)' > creds.json" ]
 
 - name: "stackexchange/dnscontrol"
