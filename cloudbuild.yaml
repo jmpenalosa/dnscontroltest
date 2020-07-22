@@ -1,4 +1,9 @@
 steps:
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
+  args: [ '-c', "gcloud secrets versions access latest --secret=secret-data --format='get(payload.data)' | tr '_-' '/+' | base64 -d > creds.json" ]
+
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "check" ]
 
