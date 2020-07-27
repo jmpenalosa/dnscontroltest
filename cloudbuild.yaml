@@ -12,3 +12,6 @@ steps:
 
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
+
+- name: "stackexchange/dnscontrol"
+  args: [ "/usr/local/bin/dnscontrol", "push" ]
