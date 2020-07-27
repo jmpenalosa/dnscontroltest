@@ -7,8 +7,8 @@ steps:
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "check" ]
 
-- name: "stackexchange/dnscontrol"
-  args: [ "/usr/local/bin/dnscontrol", "preview" ]
+#- name: "stackexchange/dnscontrol"
+#  args: [ "/usr/local/bin/dnscontrol", "preview" ]
 
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
