@@ -17,5 +17,5 @@ D('dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
 // Create Domain Test:
 
 D('private.dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
-    A('@', '205.174.165.80'),
+    A('@', '205.174.165.80')
 );
