@@ -3,17 +3,16 @@
 var REG_NONE = NewRegistrar('none', 'NONE');
 var GCLOUD = NewDnsProvider('gcloud', 'GCLOUD');
 
-// var R53 = NewDnsProvider('r53_main', 'ROUTE53');
+var REG_NONE = NewRegistrar('none', 'NONE');
+var R53 = NewDnsProvider('r53_main', 'ROUTE53');
 
 
-/// Domains:
+// Domains:
 
-D('dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
+D('dreamingleo.com', REG_NONE, DnsProvider(GCLOUD,2), DnsProvider (R53,2),
     A('@', '104.198.139.177'),
     A('www', '104.198.139.177'),
-    A('awstest', '34.68.48.209')
+    A('awstest3', '34.68.48.209')
 );
 
-D('dataset.dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
-    A('@', '205.174.165.80')
-); 
+
