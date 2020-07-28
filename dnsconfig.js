@@ -14,6 +14,6 @@ D('dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
     A('awstest', '34.68.48.209')
 );
 
-D('private.dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
+D('privatetest.dreamingleo.com', REG_NONE, DnsProvider(GCLOUD),
     A('@', '205.174.165.80')
 ); 
