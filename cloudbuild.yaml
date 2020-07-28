@@ -1,17 +1,22 @@
 steps:
 
+##This grabs the secret stored in the project's Secrets Manager
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
   args: [ '-c', "gcloud secrets versions access latest --secret=creds-json > creds.json" ]
 
-##- name: "stackexchange/dnscontrol"
-##  args: [ "/usr/local/bin/dnscontrol", "check" ]
-
-##- name: "stackexchange/dnscontrol"
-##  args: [ "/usr/local/bin/dnscontrol", "preview" ]
-
+##This ensures that all domains in your configuration are present in all providers.
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
 
-##- name: "stackexchange/dnscontrol"
-##  args: [ "/usr/local/bin/dnscontrol", "push" ]
+##This checks and validates your dnsconfig.js without accessing providers.
+- name: "stackexchange/dnscontrol"
+  args: [ "/usr/local/bin/dnscontrol", "check" ]
+
+##This reads live configuration and identifies changes to be made without applying them.
+- name: "stackexchange/dnscontrol"
+  args: [ "/usr/local/bin/dnscontrol", "preview" ]
+
+##This pushes the changes to the provider.
+- name: "stackexchange/dnscontrol"
+  args: [ "/usr/local/bin/dnscontrol", "push" ]
