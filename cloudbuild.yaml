@@ -4,14 +4,14 @@ steps:
   entrypoint: 'bash'
   args: [ '-c', "gcloud secrets versions access latest --secret=creds-json > creds.json" ]
 
-//- name: "stackexchange/dnscontrol"
-//  args: [ "/usr/local/bin/dnscontrol", "check" ]
+##- name: "stackexchange/dnscontrol"
+##  args: [ "/usr/local/bin/dnscontrol", "check" ]
 
-//- name: "stackexchange/dnscontrol"
-//  args: [ "/usr/local/bin/dnscontrol", "preview" ]
+##- name: "stackexchange/dnscontrol"
+##  args: [ "/usr/local/bin/dnscontrol", "preview" ]
 
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
 
-//- name: "stackexchange/dnscontrol"
-//  args: [ "/usr/local/bin/dnscontrol", "push" ]
+##- name: "stackexchange/dnscontrol"
+##  args: [ "/usr/local/bin/dnscontrol", "push" ]
