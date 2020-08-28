@@ -7,7 +7,7 @@ steps:
 
 ##This copies the dnsconfig.js file from the folder for cloudbuild
 - name: 'ubuntu'
-  args: [ 'cp', 'dreamingleo-com/dnsconfig.js', '.'  ]
+  args: [ 'cp', 'lukethelabrador-com/dnsconfig.js', '.'  ]
 
 ##This ensures that all domains in your configuration are present in all providers.
 ##If a zone does not exist, it will create it with a zone-"newdomain-com"
