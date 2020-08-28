@@ -5,6 +5,10 @@ steps:
   entrypoint: 'bash'
   args: [ '-c', "gcloud secrets versions access latest --secret=creds-json > creds.json" ]
 
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
+  args: [ "cp /dreamingleo-com/* ." ]
+
 ##This ensures that all domains in your configuration are present in all providers.
 ##If a zone does not exist, it will create it with a zone-"newdomain-com"
 - name: "stackexchange/dnscontrol"
