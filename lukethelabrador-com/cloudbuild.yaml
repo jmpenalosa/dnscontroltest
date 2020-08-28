@@ -3,7 +3,7 @@ steps:
 ##This grabs the secret stored in the project's Secrets Manager
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
-  args: [ '-c', "gcloud secrets versions access latest --secret=creds-json > creds.json" ]
+  args: [ '-c', "gcloud secrets versions access latest --secret=lukethelabrador-json > creds.json" ]
 
 ##This copies the dnsconfig.js file from the folder for cloudbuild
 - name: 'ubuntu'
