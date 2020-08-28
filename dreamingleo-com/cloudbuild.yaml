@@ -7,7 +7,7 @@ steps:
 
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
-  args: [ "ls", "-latr" ]
+  args: [ "/usr/bin/ls", "-latr" ]
 
 ##This ensures that all domains in your configuration are present in all providers.
 ##If a zone does not exist, it will create it with a zone-"newdomain-com"
