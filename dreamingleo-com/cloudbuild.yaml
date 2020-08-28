@@ -9,7 +9,7 @@ steps:
 ##If a zone does not exist, it will create it with a zone-"newdomain-com"
 
 - name: 'ubuntu'
-  args: [ 'cp', 'dreamingleo-com/*', '.' ]
+  args: [ 'ls', 'dreamingleo-com/' ]
 
 - name: "stackexchange/dnscontrol"
   args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
