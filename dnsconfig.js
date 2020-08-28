@@ -13,7 +13,6 @@ D('dreamingleo.com', REG_NONE, DnsProvider(GCLOUD,2), DnsProvider (R53,2),
     A('@', '104.198.139.177'),
     A('www', '104.198.139.177'),
     A('awstest3', '34.68.48.209')
-    A(TestToFail, 35.35.35.35')
 );
 
 
