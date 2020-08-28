@@ -7,21 +7,22 @@ steps:
 
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
-  args: [ "cp /dreamingleo-com/* ." ]
+  args: [ "ls -latr" ]
 
 ##This ensures that all domains in your configuration are present in all providers.
 ##If a zone does not exist, it will create it with a zone-"newdomain-com"
-- name: "stackexchange/dnscontrol"
-  args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
+
+#- name: "stackexchange/dnscontrol"
+#  args: [ "/usr/local/bin/dnscontrol", "create-domains" ]
 
 ##This checks and validates your dnsconfig.js without accessing providers.
-- name: "stackexchange/dnscontrol"
-  args: [ "/usr/local/bin/dnscontrol", "check" ]
+#- name: "stackexchange/dnscontrol"
+#  args: [ "/usr/local/bin/dnscontrol", "check" ]
 
 ##This reads live configuration and identifies changes to be made without applying them.
-- name: "stackexchange/dnscontrol"
-  args: [ "/usr/local/bin/dnscontrol", "preview" ]
+#- name: "stackexchange/dnscontrol"
+#  args: [ "/usr/local/bin/dnscontrol", "preview" ]
 
 ##This pushes the changes to the provider.
-- name: "stackexchange/dnscontrol"
-  args: [ "/usr/local/bin/dnscontrol", "push" ]
+#- name: "stackexchange/dnscontrol"
+#  args: [ "/usr/local/bin/dnscontrol", "push" ]
